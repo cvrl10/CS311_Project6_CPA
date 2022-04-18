@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Balance Sheet Calculator</title>
+        <link rel="stylesheet" href="css/balance.css" />
+    </head>
+    <body>
+        <div id="header" class="flex">
+            Bellarmine Financials - Balance Sheet Calculator
+        </div>
+        <div id="container" class="container">
+            <div id="assets" class="title" style="border-right: none">Assets</div>   <div id="liabilities" class="title" style="border-left: none">Liabilities</div>
+
+            <div id="currentAssets" class="subheaders">Current Assets</div>    
+            <div id="currentLiabilities" class="subheaders">Current Liabilities</div>
+
+            <div class="button"><button id="assetsBtn" onclick="display('.assets')">Add Current Assets</button></div>
+            <div class="button"><button id="liabilitiesBtn" onclick="display('.liabilities')">Add Current Liabilities</button></div>
+
+            <div class="assets">
+                <label for="cash">Cash:</label>
+                <input id="cash" oninput="sum(id)"></input>
+            </div>
+
+            <div class="liabilities">
+                <label for="accounts">Accounts Payable:</label>
+                <input id="accounts" oninput="sum(id)"></input>
+            </div> 
+
+            <div class="assets">
+                <label for="inventory">Inventory:</label>
+                <input id="inventory" oninput="sum(id)"></input>
+            </div>
+            
+            <div class="liabilities">
+                <label for="notes">Notes Payable:</label>
+                <input id="notes" oninput="sum(id)"></input>
+            </div>
+
+            <div class="assets">
+                <label for="supplies">Supplies:</label>
+                <input id="supplies" oninput="sum(id)"></input>
+            </div>
+
+            <div class="liabilities">
+                <label for="interest">Interest Payable:</label>
+                <input id="interest" oninput="sum(id)"></input>
+            </div>
+
+            <div class="assets">
+                <label for="investments">Temporary Investments:</label>
+                <input id="investments" oninput="sum(id)"></input>
+            </div>
+
+            <div class="liabilities">
+                <label for="wages">Wages Payable:</label>
+                <input id="wages" oninput="sum(id)"></input>
+            </div>
+
+            <div id="assetsTotal" class="assets">
+                <u>Total Current Assets:</u>
+            </div>
+
+            <div class="liabilities">
+                <label for="expenses">Accrued Expenses:</label>
+                <input id="expenses" oninput="sum(id)"></input>
+            </div>
+            <div class="placeholder">
+            </div>
+            <div id="liabilitiesTotal" class="liabilities">
+                <u>Total Current Liabilities:</u>
+            </div>
+
+           <!--end of Current Assets and Current Liabilities-->
+
+            <div id="currentAssets" class="subheaders">Investment Property & Equipment</div>    
+            <div id="currentLiabilities" class="subheaders">Long-Term Liabilities</div>
+
+            <div class="button"><button id="investmentBtn" onclick="display('.investment')">Add Investment Property & Equipment</button></div>
+            <div class="button"><button id="longTermBtn" onclick="display('.longTerm')">Add Long-Term Liabilities</button></div>
+
+            <div class="investment">
+                <label for="lend">Lend:</label>
+                <input id="lend" oninput="sum(id)"></input>
+            </div>
+
+            <div class="longTerm">
+                <label for="accounts">Notes Payable:</label>
+                <input id="accounts" oninput="sum(id)"></input>
+            </div> 
+
+            <div class="investment">
+                <label for="building">Building and Improvements:</label>
+                <input id="building" oninput="sum(id)"></input>
+            </div>
+            
+            <div class="longTerm">
+                <label for="bonds">Bonds Payable:</label>
+                <input id="bonds" oninput="sum(id)"></input>
+            </div>
+
+            <div class="investment">
+                <label for="equipment">Equipment:</label>
+                <input id="equipment" oninput="sum(id)"></input>
+            </div>
+
+            <div id="longTermTotal" class="longTerm">
+                <u>Total Long-Term Liabilities:</u>
+            </div>
+
+            <div class="investment">
+                <label for="temp">Temporary Investments:</label>
+                <input id="temp" oninput="sum(id)"></input>
+            </div>
+
+            <div class="placeholder">
+            </div>
+
+            <div id="investmentTotal" class="investment">
+                <u>Total Investment Property and Equipment:</u>
+            </div>
+
+            <div class="placeholder">
+            </div>
+
+            <!--end of Investment Property & Equipment and Long-Term Liabilities-->
+
+            <div id="currentAssets" class="subheaders">Intangibles</div>    
+            <div id="currentLiabilities" class="subheaders" ><font size="5">Total Position</font></div>
+
+            <div class="button"><button id="intangiblesBtn" class="button" onclick="display('.intangibles')">Add Intangibles</button></div>
+
+            <div class="placeholder">
+            </div>
+
+            <div class="intangibles">
+                <label for="trade">Trade Names:</label>
+                <input id="trade" oninput="sum(id)"></input>
+            </div>
+
+            <div><button id="calculate" class="button" style="margin-left: 5px;"hidden onclick="total()">Calculate Position</button></div>
+
+
+
+            <div class="intangibles">
+                <label for="goodwill">Goodwill:</label>
+                <input id="goodwill" oninput="sum(id)"></input>
+            </div>
+
+            <div id="totalAssets" class="subheaders">
+                Total Assets:
+            </div>
+
+            <div id="intangiblesTotal" class="intangibles">
+                <u>Total Intangibles:</u>
+            </div>
+
+            <div id="totalLiabilities" class="subheaders">
+                Total Liabilities:
+            </div>
+
+            <div class="placeholder">
+            </div>
+
+            <div id="position" class="subheaders">
+                Position:
+            </div>
+
+                
+        </div>
+        <div id="footer" class="flex">&#169; Bellarmine University 2022</div>
+
+        
+        <script src="js/balance.js" ></script>
+    </body>
+</html>
